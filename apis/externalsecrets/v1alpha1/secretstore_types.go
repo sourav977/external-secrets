@@ -38,57 +38,9 @@ type SecretStoreSpec struct {
 // +kubebuilder:validation:MinProperties=1
 // +kubebuilder:validation:MaxProperties=1
 type SecretStoreProvider struct {
-	// AWS configures this store to sync secrets using AWS Secret Manager provider
-	// +optional
-	AWS *AWSProvider `json:"aws,omitempty"`
-
-	// AzureKV configures this store to sync secrets using Azure Key Vault provider
-	// +optional
-	AzureKV *AzureKVProvider `json:"azurekv,omitempty"`
-
-	// Akeyless configures this store to sync secrets using Akeyless Vault provider
-	// +optional
-	Akeyless *AkeylessProvider `json:"akeyless,omitempty"`
-
-	// Vault configures this store to sync secrets using Hashi provider
-	// +optional
-	Vault *VaultProvider `json:"vault,omitempty"`
-
-	// GCPSM configures this store to sync secrets using Google Cloud Platform Secret Manager provider
-	// +optional
-	GCPSM *GCPSMProvider `json:"gcpsm,omitempty"`
-
-	// Oracle configures this store to sync secrets using Oracle Vault provider
-	// +optional
-	Oracle *OracleProvider `json:"oracle,omitempty"`
-
 	// IBM configures this store to sync secrets using IBM Cloud provider
 	// +optional
 	IBM *IBMProvider `json:"ibm,omitempty"`
-
-	// YandexLockbox configures this store to sync secrets using Yandex Lockbox provider
-	// +optional
-	YandexLockbox *YandexLockboxProvider `json:"yandexlockbox,omitempty"`
-
-	// Gitlab configures this store to sync secrets using Gitlab Variables provider
-	// +optional
-	Gitlab *GitlabProvider `json:"gitlab,omitempty"`
-
-	// Alibaba configures this store to sync secrets using Alibaba Cloud provider
-	// +optional
-	Alibaba *AlibabaProvider `json:"alibaba,omitempty"`
-
-	// Webhook configures this store to sync secrets using a generic templated webhook
-	// +optional
-	Webhook *WebhookProvider `json:"webhook,omitempty"`
-
-	// Kubernetes configures this store to sync secrets using a Kubernetes cluster provider
-	// +optional
-	Kubernetes *KubernetesProvider `json:"kubernetes,omitempty"`
-
-	// Fake configures a store with static key/value pairs
-	// +optional
-	Fake *FakeProvider `json:"fake,omitempty"`
 }
 
 type SecretStoreRetrySettings struct {
